@@ -2,6 +2,10 @@
 
 Este repositório contém um programa que gera de forma interativa o arquivo de arquitetura para o [Projeto Amnesia](http://amnesia.lasdpc.icmc.usp.br) utilizado na matéria Arquitetura de Computadores III do curso de Ciência da Computação da Pontifícia Universidade Católica de Minas Gerais.
 
+## Download
+
+Os objetos executáveis podem ser baixados de ["Releases"](https://github.com/Henriquemcc/Gerador_arquivo_arquitetura_amnesia_RustLang/releases).
+
 ## Compilação
 
 ### Pré-requisito
