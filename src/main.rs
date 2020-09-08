@@ -60,7 +60,7 @@ fn obter_comando() -> u8
 
         if comando > 4
         {
-            eprint!("Comando inválido!");
+            eprintln!("Comando inválido!");
         }
         else
         {
@@ -481,7 +481,8 @@ fn obter_nome_arquivo() -> String
     let mut nome_arquivo = String::new();
     loop
     {
-        println!("Nome do arquivo");
+        print!("Nome do arquivo:");
+        io::stdout().flush().expect("flush failed!");
         let entrada = myio::read_string().trim().to_string();
 
         if !entrada.is_ascii()
