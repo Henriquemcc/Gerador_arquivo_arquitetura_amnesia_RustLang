@@ -10,7 +10,7 @@ The executable object can be downloaded from ["Releases"](https://github.com/Hen
 
 ## How to compile
 
-### Prerequisite
+### Requirements
 
 1- Verify if RustLang's Cargo is installed on your computer, typing the following command on the terminal (on Windows, is the command prompt):
 ```
