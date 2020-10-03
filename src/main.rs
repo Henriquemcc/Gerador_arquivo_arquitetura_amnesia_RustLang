@@ -38,7 +38,7 @@ fn main()
     bem_vindo();
 
     //Criando uma variavel para armazenar as configuracoes do Amnesia
-    let mut configuracoes = Arquitetura::new();
+    let mut arquitetura = Arquitetura::new();
 
     //Obtendo e executando o comando do usuario
     loop
@@ -50,16 +50,16 @@ fn main()
             break;
         } else if comando == 1
         {
-            criar_arquitetura(&mut configuracoes);
+            criar_arquitetura(&mut arquitetura);
         } else if comando == 2
         {
-            exibir_arquitetura(&configuracoes);
+            exibir_arquitetura(&arquitetura);
         } else if comando == 3
         {
-            alterar_arquitetura(&mut configuracoes)
+            alterar_arquitetura(&mut arquitetura)
         } else if comando == 4
         {
-            salvar_arquitetura_arquivo(&configuracoes);
+            salvar_arquitetura_arquivo(&arquitetura);
         }
     }
 }
