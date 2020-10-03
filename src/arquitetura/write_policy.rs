@@ -22,44 +22,11 @@
  * SOFTWARE.
  */
 
-use crate::arquitetura::configuracoes::Arquitetura;
-use crate::fronteira::{bem_vindo, obter_comando};
-use crate::fronteira::alterar_arquitetura::alterar_arquitetura;
-use crate::fronteira::criar_arquitetura::criar_arquitetura;
-use crate::fronteira::exibir_arquitetura::exibir_arquitetura;
-use crate::fronteira::salvar_arquivo::salvar_arquitetura_arquivo;
-
-mod arquitetura;
-mod fronteira;
-
-/// Executa o programa.
-fn main()
+///Define uma enum para a política de escrita.
+#[derive(Copy, Clone, PartialEq)]
+pub enum WritePolicy
 {
-    bem_vindo();
-
-    //Criando uma variavel para armazenar as configuracoes do Amnesia
-    let mut configuracoes = Arquitetura::new();
-
-    //Obtendo e executando o comando do usuario
-    loop
-    {
-        let comando = obter_comando();
-
-        if comando == 0
-        {
-            break;
-        } else if comando == 1
-        {
-            criar_arquitetura(&mut configuracoes);
-        } else if comando == 2
-        {
-            exibir_arquitetura(&configuracoes);
-        } else if comando == 3
-        {
-            alterar_arquitetura(&mut configuracoes)
-        } else if comando == 4
-        {
-            salvar_arquitetura_arquivo(&configuracoes);
-        }
-    }
+    WriteBack,
+    WriteThrough,
+    Null,
 }

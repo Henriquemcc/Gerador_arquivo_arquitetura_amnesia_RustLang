@@ -22,44 +22,43 @@
  * SOFTWARE.
  */
 
-use crate::arquitetura::configuracoes::Arquitetura;
-use crate::fronteira::{bem_vindo, obter_comando};
-use crate::fronteira::alterar_arquitetura::alterar_arquitetura;
-use crate::fronteira::criar_arquitetura::criar_arquitetura;
-use crate::fronteira::exibir_arquitetura::exibir_arquitetura;
-use crate::fronteira::salvar_arquivo::salvar_arquitetura_arquivo;
+pub mod criar_arquitetura;
+pub mod alterar_arquitetura;
+pub mod exibir_arquitetura;
+pub mod salvar_arquivo;
+pub(crate) mod myio;
 
-mod arquitetura;
-mod fronteira;
 
-/// Executa o programa.
-fn main()
+pub fn bem_vindo()
 {
-    bem_vindo();
+    //Exibindo mensagem de bem vindo
+    println!("Bem vindo ao gerador de arquitetura para o Amnesia.");
+    println!("Este programa serve para criar um arquivo de arquitetura para o simulador Amnesia.");
+    println!("O Amnesia pode ser baixado em: http://amnesia.lasdpc.icmc.usp.br");
+}
 
-    //Criando uma variavel para armazenar as configuracoes do Amnesia
-    let mut configuracoes = Arquitetura::new();
-
-    //Obtendo e executando o comando do usuario
+pub fn obter_comando() -> u8
+{
+    let mut comando: u8;
     loop
     {
-        let comando = obter_comando();
+        //Exibindo os comandos
+        println!("O que deseja fazer?");
+        println!("0 - Sair.");
+        println!("1 - Criar nova configuração de arquitetura para o Amnesia.");
+        println!("2 - Exibir atual configuração de arquitetura do Amnesia.");
+        println!("3 - Alterar atual configuração de arquitetura do Amnesia.");
+        println!("4 - Salvar configuração de arquitetura em um arquivo.");
 
-        if comando == 0
+        //Obtendo o comando
+        comando = myio::read_u8();
+
+        if comando > 4
         {
+            eprintln!("Comando inválido!");
+        } else {
             break;
-        } else if comando == 1
-        {
-            criar_arquitetura(&mut configuracoes);
-        } else if comando == 2
-        {
-            exibir_arquitetura(&configuracoes);
-        } else if comando == 3
-        {
-            alterar_arquitetura(&mut configuracoes)
-        } else if comando == 4
-        {
-            salvar_arquitetura_arquivo(&configuracoes);
         }
     }
+    return comando;
 }
