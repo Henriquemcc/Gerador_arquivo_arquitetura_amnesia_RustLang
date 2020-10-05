@@ -26,7 +26,7 @@ rustc --version
 
 ### Compilando
 
-1- Baixe o [arquivo zip](https://github.com/Henriquemcc/Gerador_arquivo_arquitetura_amnesia_RustLang/archive/master.zip) deste repositório git.
+1- Baixe o [arquivo zip](https://github.com/Henriquemcc/Gerador_arquivo_arquitetura_amnesia_RustLang/archive/main.zip) deste repositório git.
 
 2- Descompacte o arquivo zip.
 
