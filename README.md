@@ -1,6 +1,7 @@
 [English Version](README.EN.md)
 
 # Gerador arquivo de arquitetura para o projeto Amnesia
+[![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6IkhlbnJpcXVlbWNjIiwicmVwbzEiOiJHZXJhZG9yX2FycXVpdm9fYXJxdWl0ZXR1cmFfYW1uZXNpYV9SdXN0TGFuZyIsImluY2x1ZGVMaW50IjpmYWxzZSwiYXV0aG9ySWQiOjIzNTQyLCJpYXQiOjE2MDIxMDg1NDl9.S2q04KC96xRG5HEA2PFQKdO0Lxs7RHVlbKstkIutK7Q)](https://www.deepcode.ai/app/gh/Henriquemcc/Gerador_arquivo_arquitetura_amnesia_RustLang/_/dashboard?utm_content=gh%2FHenriquemcc%2FGerador_arquivo_arquitetura_amnesia_RustLang)
 
 Este repositório contém o código fonte de um programa que gera de forma interativa o arquivo de arquitetura para o [Projeto Amnesia](http://amnesia.lasdpc.icmc.usp.br), utilizado na matéria Arquitetura de Computadores III do curso de Ciência da Computação da Pontifícia Universidade Católica de Minas Gerais.
 
